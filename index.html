@@ -1,72 +1,485 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Garetti Automotivo | Bancos em Couro</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Garetti Automotivo | Bancos em Couro, Revestimentos e Acessórios – Orçamento Rápido</title>
+<meta name="description" content="Fabricante de bancos em couro, revestimento de assoalho e acessórios automotivos há mais de 40 anos. Envio para todo o Brasil. Peça seu orçamento agora pelo WhatsApp ou e-mail.">
+<meta name="keywords" content="banco de couro para carro, capa de banco em couro, revestimento de assoalho automotivo, Garetti automotivo, Mirassol SP">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.garetti.com.br/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Garetti Automotivo">
+<meta property="og:title" content="Garetti Automotivo | Bancos em Couro e Acessórios para o seu Carro">
+<meta property="og:description" content="Fabricação própria há mais de 40 anos. Envio para todo o Brasil. Orçamento rápido pelo WhatsApp ou e-mail.">
+<meta property="og:url" content="https://www.garetti.com.br/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://www.garetti.com.br/assets/garetti-logo.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Garetti Automotivo">
+<meta name="twitter:description" content="Bancos em couro, revestimentos e acessórios automotivos, fabricação própria desde 1980.">
+
+<link rel="icon" href="assets/garetti-logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": "Garetti Automotivo",
+  "description": "Fabricante de bancos em couro, revestimento de assoalho e acessórios automotivos. Atuação em todo o território nacional desde 1980.",
+  "foundingDate": "1980",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Oswaldo Cruz, 21-93, Centro",
+    "addressLocality": "Mirassol",
+    "addressRegion": "SP",
+    "postalCode": "15130-047",
+    "addressCountry": "BR"
+  },
+  "telephone": "+5517996527701",
+  "email": "loja@garetti.com.br",
+  "areaServed": "BR",
+  "sameAs": [
+    "https://www.instagram.com/garetticouro/",
+    "https://www.facebook.com/couroautomotivo/",
+    "https://www.youtube.com/user/garetticouros"
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --orange:#F05A22;
+    --orange-dark:#D14A16;
+    --orange-tint:#FFF1EB;
+    --gray:#707070;
+    --gray-soft:#9B9B9B;
+    --gray-line:#E7E5E3;
+    --bg-alt:#F7F6F5;
+    --ink:#1E1D1C;
+    --white:#FFFFFF;
+    --display:"Sora", -apple-system, sans-serif;
+    --body:"Inter", -apple-system, sans-serif;
+    --max:1160px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:.001ms !important; transition-duration:.001ms !important;}
+  }
+  body{
+    margin:0; font-family:var(--body); color:var(--ink); background:var(--white);
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  h1,h2,h3{font-family:var(--display); margin:0 0 .4em; color:var(--ink); line-height:1.15;}
+  p{margin:0 0 1em; color:var(--gray);}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 24px;}
+  :focus-visible{outline:3px solid var(--orange); outline-offset:2px;}
+
+  .eyebrow{
+    font-family:var(--body); font-weight:700; font-size:12.5px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--orange); display:inline-block; margin-bottom:10px;
+  }
+
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    font-family:var(--body); font-weight:700; font-size:15px;
+    padding:14px 26px; border-radius:8px; text-decoration:none; border:2px solid transparent;
+    cursor:pointer; transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--orange); color:#fff; box-shadow:0 8px 20px -8px rgba(240,90,34,.55);}
+  .btn-primary:hover{background:var(--orange-dark);}
+  .btn-outline{background:#fff; color:var(--ink); border-color:var(--gray-line);}
+  .btn-outline:hover{border-color:var(--orange); color:var(--orange);}
+  .btn-block{width:100%;}
+
+  /* -------- Header -------- */
+  header{
+    position:sticky; top:0; z-index:50; background:#fff;
+    border-bottom:1px solid var(--gray-line);
+  }
+  .nav-row{display:flex; align-items:center; justify-content:space-between; padding:14px 24px; gap:16px;}
+  .logo img{height:34px; width:auto;}
+  .head-actions{display:flex; align-items:center; gap:18px;}
+  .head-phone{display:flex; align-items:center; gap:8px; font-weight:600; font-size:14.5px; text-decoration:none; color:var(--ink);}
+  .head-phone svg{flex-shrink:0;}
+  .head-phone span{display:none;}
+  @media (min-width:720px){ .head-phone span{display:inline;} }
+
+  /* -------- Signature: angled shapes echoing the logo's diagonal cut -------- */
+  .hero{
+    background:var(--bg-alt);
+    position:relative; overflow:hidden;
+    padding:56px 0 0;
+  }
+  .hero::after{
+    content:"";
+    position:absolute; right:-10%; top:-15%; width:60%; height:140%;
+    background:var(--orange-tint);
+    clip-path:polygon(35% 0, 100% 0, 100% 100%, 10% 100%);
+    z-index:0;
+  }
+  .hero-grid{
+    position:relative; z-index:1;
+    display:grid; grid-template-columns:1.05fr .95fr; gap:48px; align-items:center;
+    padding-bottom:56px;
+  }
+  .hero h1{font-size:clamp(30px,4vw,46px); max-width:15ch;}
+  .hero .lede{font-size:17.5px; max-width:42ch; margin:16px 0 26px;}
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:28px;}
+  .trust-row{display:flex; gap:26px; flex-wrap:wrap;}
+  .trust-item{display:flex; align-items:center; gap:9px; font-size:14px; font-weight:600; color:var(--ink);}
+  .trust-item svg{flex-shrink:0;}
+
+  /* form card */
+  .form-card{
+    background:#fff; border-radius:14px; padding:30px 28px;
+    box-shadow:0 30px 60px -25px rgba(30,29,28,.35);
+    border:1px solid var(--gray-line);
+  }
+  .form-card h2{font-size:21px; margin-bottom:4px;}
+  .form-card .sub{font-size:14px; margin-bottom:20px;}
+  .field{margin-bottom:14px;}
+  .field label{display:block; font-size:12.5px; font-weight:700; color:var(--ink); margin-bottom:6px;}
+  .field input, .field select{
+    width:100%; padding:12px 13px; border:1.5px solid var(--gray-line); border-radius:8px;
+    font-family:var(--body); font-size:15px; background:#fff; color:var(--ink);
+  }
+  .field input:focus, .field select:focus{border-color:var(--orange);}
+  .check-row{display:flex; gap:9px; align-items:flex-start; margin:14px 0 18px; font-size:12.5px; color:var(--gray);}
+  .check-row input{margin-top:3px;}
+  .form-divider{display:flex; align-items:center; gap:12px; margin:18px 0; font-size:12px; color:var(--gray-soft); font-weight:600; text-transform:uppercase; letter-spacing:.06em;}
+  .form-divider::before,.form-divider::after{content:""; flex:1; height:1px; background:var(--gray-line);}
+
+  /* -------- Sections -------- */
+  section{padding:64px 0;}
+  .section-head{max-width:600px; margin:0 auto 40px; text-align:center;}
+  .section-head.left{text-align:left; margin:0 0 36px;}
+  .section-head h2{font-size:clamp(24px,3vw,32px);}
+
+  /* Produtos */
+  .product-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .card{
+    background:#fff; border:1px solid var(--gray-line); border-radius:12px; padding:26px 22px;
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .card:hover{transform:translateY(-4px); box-shadow:0 18px 30px -20px rgba(30,29,28,.35); border-color:var(--orange);}
+  .card .icon{
+    width:44px; height:44px; border-radius:10px; background:var(--orange-tint);
+    display:flex; align-items:center; justify-content:center; margin-bottom:14px;
+  }
+  .card h3{font-size:16.5px; margin-bottom:6px;}
+  .card p{font-size:13.5px; margin-bottom:0;}
+
+  /* Como funciona */
+  .how{background:var(--bg-alt);}
+  .how-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .step{background:#fff; border-radius:12px; padding:28px 24px; border:1px solid var(--gray-line); position:relative;}
+  .step .num{
+    font-family:var(--display); font-weight:800; font-size:14px; color:var(--orange);
+    background:var(--orange-tint); width:34px; height:34px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center; margin-bottom:14px;
+  }
+  .step h3{font-size:17px; margin-bottom:6px;}
+  .step p{font-size:14px; margin-bottom:0;}
+
+  /* FAQ */
+  .faq-item{border-bottom:1px solid var(--gray-line); padding:20px 0;}
+  .faq-item h3{font-size:16px; margin-bottom:8px; display:flex; align-items:center; gap:10px;}
+  .faq-item h3::before{content:"?"; color:var(--orange); font-weight:800;}
+  .faq-item p{font-size:14.5px; margin-bottom:0; padding-left:22px;}
+
+  /* Final CTA */
+  .final-cta{
+    background:var(--ink); color:#fff; text-align:center; position:relative; overflow:hidden;
+  }
+  .final-cta::before{
+    content:""; position:absolute; left:-10%; bottom:-40%; width:50%; height:140%;
+    background:rgba(240,90,34,.18); clip-path:polygon(30% 0, 100% 0, 70% 100%, 0 100%);
+  }
+  .final-cta .wrap{position:relative; z-index:1;}
+  .final-cta h2{color:#fff; font-size:clamp(24px,3.4vw,34px); max-width:22ch; margin:0 auto 12px;}
+  .final-cta p{color:rgba(255,255,255,.75); max-width:46ch; margin:0 auto 26px;}
+  .final-cta .btn-row{display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
+
+  /* Footer */
+  footer{background:#fff; border-top:1px solid var(--gray-line); padding:40px 0 24px; font-size:13.5px; color:var(--gray);}
+  .foot-grid{display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap;}
+  .foot-logo img{height:26px; margin-bottom:10px;}
+  .social-row{display:flex; gap:12px; margin-top:14px;}
+  .social-row a{
+    width:34px; height:34px; border-radius:50%; border:1px solid var(--gray-line);
+    display:flex; align-items:center; justify-content:center; text-decoration:none;
+    transition:border-color .15s;
+  }
+  .social-row a:hover{border-color:var(--orange);}
+  .foot-links{display:flex; flex-direction:column; gap:8px;}
+  .foot-links a{text-decoration:none;}
+  .foot-links a:hover{color:var(--orange);}
+  .foot-bottom{margin-top:28px; padding-top:18px; border-top:1px solid var(--gray-line); font-size:12px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
+
+  .float-wa{
+    position:fixed; bottom:20px; right:20px; z-index:60;
+    background:#25D366; color:#fff; width:56px; height:56px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 10px 22px rgba(0,0,0,.25); text-decoration:none;
+  }
+
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;}
+    .product-grid{grid-template-columns:repeat(2,1fr);}
+    .how-grid{grid-template-columns:1fr;}
+  }
+  @media (max-width:560px){
+    .product-grid{grid-template-columns:1fr;}
+  }
+</style>
 </head>
 <body>
+
 <header>
-<img src="Garetti logo(1).png" class="logo">
-<a class="btn" href="https://wa.me/5517996527701">WhatsApp</a>
+  <div class="wrap nav-row">
+    <a href="#topo" class="logo"><img src="assets/garetti-logo.png" alt="Garetti Automotivo"></a>
+    <div class="head-actions">
+      <a class="head-phone" href="tel:+5517996527701">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 5h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 14l5 2v4a2 2 0 0 1-2 2C9.5 22 2 14.5 2 7a2 2 0 0 1 2-2Z" stroke="#F05A22" stroke-width="1.8"/></svg>
+        <span>(17) 99652-7701</span>
+      </a>
+      <a href="#orcamento" class="btn btn-primary">Pedir orçamento</a>
+    </div>
+  </div>
 </header>
 
-<section class="hero">
-<div class="content">
-<h1>Bancos em Couro Automotivo Sob Medida</h1>
-<p>Acabamento premium, fabricação própria e instalação especializada para deixar seu veículo ainda mais sofisticado.</p>
-<div class="buttons">
-<a class="btn" href="#orcamento">Solicitar Orçamento</a>
-<a class="btn-outline" href="https://wa.me/5517996527701">Falar no WhatsApp</a>
-</div>
-<ul>
-<li>✓ Mais de 40 anos de experiência</li>
-<li>✓ Fabricação própria</li>
-<li>✓ Diversas cores e acabamentos</li>
-<li>✓ Atendimento para todo o Brasil</li>
-</ul>
-</div>
-<div class="hero-image">
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200">
-</div>
-</section>
+<main id="topo">
 
-<section class="benefits">
-<h2>Por que escolher a Garetti?</h2>
-<div class="grid">
-<div>🚗 Projeto sob medida</div>
-<div>🎨 Personalização exclusiva</div>
-<div>🛡 Compatível com airbags</div>
-<div>💧 Fácil limpeza</div>
-<div>⚡ Instalação rápida</div>
-<div>🏆 Acabamento premium</div>
-</div>
-</section>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Fabricação própria · Desde 1980</span>
+        <h1>Bancos em couro sob medida para o seu carro</h1>
+        <p class="lede">Capas de banco, revestimento de assoalho, volante e acessórios, fabricados há mais de 40 anos e enviados para todo o Brasil. Envie o modelo do seu veículo e receba um orçamento rápido.</p>
+        <div class="hero-ctas">
+          <a href="#orcamento" class="btn btn-primary">Solicitar orçamento</a>
+          <a href="https://wa.me/5517996527701?text=Olá!%20Vim%20pelo%20anúncio%20e%20quero%20um%20orçamento." class="btn btn-outline" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.8 19L4 20Z" stroke="#25D366" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            Chamar no WhatsApp
+          </a>
+        </div>
+        <div class="trust-row">
+          <div class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.6 5.9L21 9l-4.5 4.4L17.6 20 12 16.8 6.4 20l1.1-6.6L3 9l6.4-1.1L12 2Z" stroke="#F05A22" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            40+ anos de fabricação
+          </div>
+          <div class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 11l2-6h14l2 6M5 11h14v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H8v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7Z" stroke="#F05A22" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7.5" cy="14.5" r="1" fill="#F05A22"/><circle cx="16.5" cy="14.5" r="1" fill="#F05A22"/></svg>
+            Envio para todo o Brasil
+          </div>
+          <div class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-9-9.5C1.5 7 4 4 7 4c2 0 4 1.5 5 3 1-1.5 3-3 5-3 3 0 5.5 3 4 7.5C19 16.5 12 21 12 21Z" stroke="#F05A22" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            Couro natural e sintético
+          </div>
+        </div>
+      </div>
 
-<section class="gallery">
-<h2>Projetos realizados</h2>
-<div class="photos">
-<img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?q=80&w=800">
-<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=800">
-<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=800">
-</div>
-</section>
+      <div class="form-card" id="orcamento">
+        <span class="eyebrow" style="margin-bottom:2px;">Resposta rápida</span>
+        <h2>Peça seu orçamento</h2>
+        <p class="sub">Preencha os dados abaixo, é rápido — nossa equipe responde no mesmo dia.</p>
 
-<section id="orcamento" class="form">
-<h2>Solicite seu orçamento</h2>
-<form action="https://formsubmit.co/loja@garetti.com.br" method="POST">
-<input type="text" placeholder="Nome" required>
-<input type="tel" placeholder="WhatsApp" required>
-<input type="text" placeholder="Marca e modelo do veículo">
-<textarea placeholder="Descreva o que deseja"></textarea>
-<button type="submit">Enviar orçamento</button>
-</form>
-</section>
+        <!-- Envio por e-mail via Formspree (grátis): troque ACTION_URL pelo endpoint gerado em formspree.io -->
+        <form id="quoteForm" action="https://formspree.io/f/ACTION_URL" method="POST">
+          <input type="hidden" name="_replyto" value="">
+          <input type="hidden" name="_subject" value="Novo orçamento pela landing page">
+          <div class="field">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="Nome" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="telefone">Telefone / WhatsApp</label>
+            <input type="tel" id="telefone" name="Telefone" required autocomplete="tel" placeholder="(17) 90000-0000">
+          </div>
+          <div class="field">
+            <label for="modelo">Modelo do carro</label>
+            <input type="text" id="modelo" name="Modelo" required placeholder="Ex: Hyundai HB20 2022">
+          </div>
+          <div class="field">
+            <label for="produto">Interesse</label>
+            <select id="produto" name="Interesse">
+              <option>Bancos em couro</option>
+              <option>Revestimento de assoalho</option>
+              <option>Acessórios</option>
+              <option>Revestimento de volante</option>
+              <option>Ainda não sei / quero indicação</option>
+            </select>
+          </div>
+          <label class="check-row">
+            <input type="checkbox" required>
+            Aceito receber contato da equipe comercial da Garetti.
+          </label>
+          <button type="submit" class="btn btn-primary btn-block">Enviar orçamento por e-mail</button>
+        </form>
+
+        <div class="form-divider">ou</div>
+        <a href="https://wa.me/5517996527701?text=Olá!%20Vim%20pelo%20anúncio%20e%20quero%20um%20orçamento." class="btn btn-outline btn-block" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.8 19L4 20Z" stroke="#25D366" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          Falar direto no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section id="produtos">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">O que fabricamos</span>
+        <h2>Tudo para renovar o interior do seu veículo</h2>
+      </div>
+      <div class="product-grid">
+        <article class="card">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 15V8a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v7" stroke="#F05A22" stroke-width="2" stroke-linecap="round"/><path d="M4 15h16v4a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-4Z" stroke="#F05A22" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Bancos em couro</h3>
+          <p>Capas sob medida para o modelo do seu carro, em couro natural ou sintético.</p>
+        </article>
+        <article class="card">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="4" y="6" width="16" height="13" rx="2" stroke="#F05A22" stroke-width="2"/><path d="M4 12h16" stroke="#F05A22" stroke-width="2"/></svg>
+          </div>
+          <h3>Revestimento de assoalho</h3>
+          <p>Proteção e acabamento premium para o piso do veículo, sob medida.</p>
+        </article>
+        <article class="card">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#F05A22" stroke-width="2"/><path d="M12 4v4M12 16v4M4 12h4M16 12h4" stroke="#F05A22" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Acessórios</h3>
+          <p>Soleiras, protetor de cárter, envelopamento e itens de personalização.</p>
+        </article>
+        <article class="card">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#F05A22" stroke-width="2"/><circle cx="12" cy="12" r="2.6" stroke="#F05A22" stroke-width="2"/><path d="M12 6v3.4M12 14.6V18M6 12h3.4M14.6 12H18" stroke="#F05A22" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Revestimento de volante</h3>
+          <p>Acabamento em couro para o volante, com opções de costura.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="how">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Como funciona</span>
+        <h2>Do orçamento à instalação, em 3 passos</h2>
+      </div>
+      <div class="how-grid">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>Conte o modelo do seu carro</h3>
+          <p>Envie marca, modelo e ano pelo formulário ou WhatsApp — não precisa sair de casa.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>Receba seu orçamento</h3>
+          <p>Nossa equipe retorna com valores e opções de couro e cor no mesmo dia.</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>Agende a instalação ou envio</h3>
+          <p>Atendimento em Mirassol/SP ou envio para qualquer lugar do Brasil.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap" style="max-width:760px;">
+      <div class="section-head left">
+        <span class="eyebrow">Dúvidas comuns</span>
+        <h2>Perguntas frequentes</h2>
+      </div>
+      <div class="faq-item">
+        <h3>Qual a diferença entre couro natural e sintético?</h3>
+        <p>Nossos bancos combinam as duas opções: couro natural nas áreas de maior contato, para conforto, e couro sintético de alta resistência nas laterais e reforços, para durabilidade. No orçamento explicamos exatamente onde cada material é usado no seu modelo.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Vocês atendem fora de Mirassol/SP?</h3>
+        <p>Sim. Trabalhamos com envio para todo o Brasil, por via aérea ou rodoviária, além do atendimento presencial na nossa fábrica.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Quanto tempo leva para receber o orçamento?</h3>
+        <p>Normalmente respondemos no mesmo dia útil, pelo canal que você preferir: e-mail ou WhatsApp.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="final-cta">
+    <div class="wrap">
+      <h2>Pronto para renovar o interior do seu carro?</h2>
+      <p>Fale agora com a nossa equipe e receba um orçamento sob medida para o seu veículo.</p>
+      <div class="btn-row">
+        <a href="#orcamento" class="btn btn-primary">Pedir orçamento</a>
+        <a href="https://wa.me/5517996527701?text=Olá!%20Vim%20pelo%20anúncio%20e%20quero%20um%20orçamento." class="btn btn-outline" target="_blank" rel="noopener" style="background:transparent; color:#fff; border-color:rgba(255,255,255,.35);">Chamar no WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+</main>
 
 <footer>
-<p>Garetti Automotivo • WhatsApp (17) 99652-7701</p>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><img src="assets/garetti-logo.png" alt="Garetti Automotivo"></div>
+        <p style="margin:0; max-width:34ch;">Rua Oswaldo Cruz, 21-93, Centro, Mirassol – SP, CEP 15130-047.</p>
+        <div class="social-row">
+          <a href="https://www.instagram.com/garetticouro/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#707070" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="#707070" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="#707070"/></svg>
+          </a>
+          <a href="https://www.facebook.com/couroautomotivo/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M14 9h3V6h-3c-2 0-3.5 1.5-3.5 3.5V11H8v3h2.5v6h3v-6H16l.5-3h-3V9.6c0-.4.3-.6.5-.6Z" stroke="#707070" stroke-width="1.4" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://www.youtube.com/user/garetticouros" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="3" stroke="#707070" stroke-width="1.6"/><path d="M10.5 10.2v3.6l3.3-1.8-3.3-1.8Z" fill="#707070"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="foot-links">
+        <a href="tel:1732423079">(17) 3242-3079</a>
+        <a href="https://wa.me/5517996527701">(17) 99652-7701 · WhatsApp</a>
+        <a href="mailto:loja@garetti.com.br">loja@garetti.com.br</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span id="year">© 2026 Garetti Automotivo.</span>
+      <span>Todos os direitos reservados.</span>
+    </div>
+  </div>
 </footer>
+
+<a class="float-wa" href="https://wa.me/5517996527701?text=Olá!%20Vim%20pelo%20anúncio%20e%20quero%20um%20orçamento." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.8 19L4 20Z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+</a>
+
+<script>
+  document.getElementById('year').textContent = '© ' + new Date().getFullYear() + ' Garetti Automotivo.';
+</script>
+
 </body>
 </html>
